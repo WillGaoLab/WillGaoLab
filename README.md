@@ -2,6 +2,8 @@
 
 Streamlit app for generating Excel paint-by-number workbooks from uploaded images.
 
+Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao.
+
 ## Use Online
 
 Open the live app:
@@ -45,6 +47,8 @@ http://127.0.0.1:8501
 - Personal website page: https://williampeidonggao.com/resources/excel-pixel-art-generator/
 
 ## Personal Use and Legal Notice
+
+Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao. The WillGaoLab name, project identity, documentation, source code organization, and product presentation are maintained by William (Peidong) Gao unless otherwise stated.
 
 This app is provided for personal, educational, research, and non-commercial creative use only.
 
