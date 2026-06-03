@@ -2,6 +2,14 @@
 
 Streamlit app for generating Excel paint-by-number workbooks from uploaded images.
 
+## Use Online
+
+Open the live app:
+
+https://willgaolab-dvy5xga3u2xexllw7lei82.streamlit.app/
+
+Upload an image, choose paper size, set exact Excel-cell resolution, choose indexed color count, and download an `.xlsx` workbook.
+
 ## Streamlit Community Cloud
 
 Use this repository in Streamlit Community Cloud with:
@@ -9,8 +17,6 @@ Use this repository in Streamlit Community Cloud with:
 - Repository: `WillGaoLab/WillGaoLab`
 - Branch: `main`
 - Main file path: `streamlit_app.py`
-
-The app lets users upload an image, choose paper size, set exact Excel-cell resolution, choose indexed color count, and download an `.xlsx` workbook.
 
 Each workbook includes:
 
