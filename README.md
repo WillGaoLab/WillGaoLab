@@ -1,16 +1,39 @@
-## Hi there 👋
+# WillGaoLab Excel Pixel Art Generator
 
-<!--
-**WillGaoLab/WillGaoLab** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Streamlit app for generating Excel paint-by-number workbooks from uploaded images.
 
-Here are some ideas to get you started:
+## Streamlit Community Cloud
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Use this repository in Streamlit Community Cloud with:
+
+- Repository: `WillGaoLab/WillGaoLab`
+- Branch: `main`
+- Main file path: `streamlit_app.py`
+
+The app lets users upload an image, choose paper size, set exact Excel-cell resolution, choose indexed color count, and download an `.xlsx` workbook.
+
+Each workbook includes:
+
+- `Reference` - finished colored pixel art.
+- `Template` - paper-style paint-by-number sheet with light gray numbers.
+- `Color Index` - indexed colors with swatches and cell counts.
+
+## Local Run
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8501
+```
+
+## Related
+
+- Project repository: https://github.com/PeidongGao/excel-pixel-art-generator
+- Personal website page: https://williampeidonggao.com/resources/excel-pixel-art-generator/
