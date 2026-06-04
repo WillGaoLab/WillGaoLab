@@ -77,9 +77,10 @@ Journal Harvester SOP provides browser-based workflows for low-volume,
 user-initiated export of publicly visible bibliographic metadata from Cell,
 Nature, and Science.
 
-- Canonical repository: https://github.com/PeidongGao/journal-harvester-sop
+- Primary development repository: https://github.com/PeidongGao/auto_paper_get_CNS
+- WillGaoLab brand mirror: https://github.com/WillGaoLab/auto_paper_get_CNS
 - Website project page: https://williampeidonggao.com/resources/journal-harvester-sop/
-- Usage disclaimer: https://github.com/PeidongGao/journal-harvester-sop/blob/main/DISCLAIMER.md
+- Usage disclaimer: https://github.com/PeidongGao/auto_paper_get_CNS/blob/main/DISCLAIMER.md
 
 The project does not publish scraped CSV datasets, publisher PDFs, full-text
 articles, paywalled content, or copyrighted figures. Users are responsible for
@@ -94,6 +95,22 @@ Springer Nature, AAAS, Crossref, or any publisher, organization, or service
 referenced in this repository. All referenced trademarks, journal titles,
 logos, and publisher names remain the property of their respective owners and
 are used solely for identification and descriptive purposes.
+
+### Attribution
+
+- Project website: https://williampeidonggao.com
+- Brand: https://github.com/WillGaoLab
+- Personal GitHub: https://github.com/PeidongGao
+
+```text
+William (Peidong) Gao
+        |
+    WillGaoLab
+        |
+Open-source Projects
+        |
+   WilliamGaoWeb
+```
 
 ## Personal Use and Legal Notice
 
