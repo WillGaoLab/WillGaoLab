@@ -39,6 +39,8 @@ def main() -> None:
     _digital_layer(uploaded_file)
     st.divider()
     _physical_layer(uploaded_file)
+    st.divider()
+    _use_privacy_and_liability()
 
 
 def _digital_layer(uploaded_file) -> None:
@@ -324,16 +326,6 @@ def _physical_layer(uploaded_file) -> None:
             "Liquitex official product: https://www.liquitex.com | "
             "24 Color Set: https://www.michaels.com/product/liquitex-basics-acrylic-24-color-paint-set-10268659"
         )
-    st.warning(
-        "Print Mode and Material Palette disclaimer: Brand and product names are provided only as "
-        "unaffiliated references. WillGaoLab is not sponsored, endorsed, or associated with any listed "
-        "brand. Palette matches, quantities, print layouts, and material recommendations are estimates "
-        "and may be inaccurate. Verify colors, dimensions, quantities, compatibility, and costs before "
-        "purchasing or producing anything. All purchasing, printing, material selection, and production "
-        "decisions are made at the user's own risk. WillGaoLab and William (Peidong) Gao accept no "
-        "responsibility or liability for purchases, losses, waste, incorrect results, or damages."
-    )
-
     if st.button(
         "Generate Physical outputs",
         type="primary",
@@ -369,6 +361,40 @@ def _physical_layer(uploaded_file) -> None:
             file_name=archive_name,
             mime="application/zip",
             key="download_physical_outputs",
+        )
+
+
+def _use_privacy_and_liability() -> None:
+    st.subheader("Use, Privacy, and Liability")
+    with st.expander("Important information", expanded=False):
+        st.markdown(
+            """
+**Uploaded images and user responsibility**
+
+- The app processes uploaded images only to generate the outputs requested by the user. It does not
+  intentionally retain uploaded images, and temporary processing files created by the app are deleted
+  after generation. Hosting-platform infrastructure may independently process data under its own terms.
+- Users are solely responsible for the images they upload and must have all rights, permissions, and
+  legal authority required to upload, transform, print, download, share, or otherwise use them.
+- WillGaoLab and William (Peidong) Gao do not claim ownership of user-uploaded images and accept no
+  responsibility or liability for uploaded content, image-rights violations, misuse, or resulting claims.
+
+**Print Mode and Material Palette**
+
+- Brand and product names are provided only as unaffiliated references. WillGaoLab and William
+  (Peidong) Gao are not sponsored, endorsed, authorized by, or associated with any listed brand,
+  manufacturer, retailer, or product.
+- Palette matches, quantities, print layouts, masks, and material recommendations are estimates and may
+  be inaccurate, incomplete, unavailable, or unsuitable. Users must independently verify colors,
+  dimensions, quantities, compatibility, safety, availability, and costs before purchasing or producing
+  anything.
+- All purchasing, printing, material selection, assembly, and production decisions are made at the
+  user's own risk and judgment. To the maximum extent permitted by law, WillGaoLab and William
+  (Peidong) Gao accept no responsibility or liability for purchases, expenses, losses, waste, incorrect
+  results, print errors, failed projects, injuries, damages, or other consequences.
+
+This information is not legal advice.
+            """
         )
 
 
