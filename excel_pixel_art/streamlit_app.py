@@ -324,6 +324,15 @@ def _physical_layer(uploaded_file) -> None:
             "Liquitex official product: https://www.liquitex.com | "
             "24 Color Set: https://www.michaels.com/product/liquitex-basics-acrylic-24-color-paint-set-10268659"
         )
+    st.warning(
+        "Print Mode and Material Palette disclaimer: Brand and product names are provided only as "
+        "unaffiliated references. WillGaoLab is not sponsored, endorsed, or associated with any listed "
+        "brand. Palette matches, quantities, print layouts, and material recommendations are estimates "
+        "and may be inaccurate. Verify colors, dimensions, quantities, compatibility, and costs before "
+        "purchasing or producing anything. All purchasing, printing, material selection, and production "
+        "decisions are made at the user's own risk. WillGaoLab and William (Peidong) Gao accept no "
+        "responsibility or liability for purchases, losses, waste, incorrect results, or damages."
+    )
 
     if st.button(
         "Generate Physical outputs",
