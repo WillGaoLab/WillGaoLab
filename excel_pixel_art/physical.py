@@ -13,6 +13,7 @@ from openpyxl.worksheet.worksheet import Worksheet
 from PIL import Image, ImageOps
 
 from .canvas import CANVAS_PRESETS, FIT_MODES, ORIENTATIONS, CanvasPreset
+from .poster_print import write_vector_poster_pdf
 
 MATERIAL_PALETTE_REFERENCES = {
     "adaptive": None,
@@ -62,11 +63,11 @@ MATERIAL_PALETTES = {
 def image_to_physical_excel(
     image_path: str | Path,
     output_path: str | Path,
-    max_size: int = 128,
+    max_size: int = 32,
     cell_size: float = 3.0,
-    material_color_count: int = 48,
+    material_color_count: int = 24,
     canvas_size: str | None = "a4",
-    resolution: tuple[int, int] | None = (128, 128),
+    resolution: tuple[int, int] | None = (32, 32),
     orientation: str = "auto",
     fit: str = "contain",
     background_color: str = "FFFFFF",
@@ -155,15 +156,12 @@ def image_to_physical_pdf(
     output_path: str | Path,
     **options,
 ) -> Path:
-    """Generate a standalone tiled printable PDF reference."""
+    """Generate a colored, numbered, and coordinated tiled printable PDF."""
     image_path = Path(image_path)
     output_path = Path(output_path)
     poster_pages = options.pop("poster_pages", (2, 2))
     image, _ = _prepare_physical_from_options(image_path, options)
-    pages = _split_image_pages(image.convert("RGB"), poster_pages)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    pages[0].save(output_path, "PDF", resolution=300, save_all=True, append_images=pages[1:])
-    return output_path
+    return write_vector_poster_pdf(image, output_path, poster_pages)
 
 
 def image_to_physical_masks(
@@ -207,12 +205,12 @@ def _prepare_physical_from_options(image_path: Path, options: dict) -> tuple[Ima
     return _prepare_physical_image(
         image_path,
         canvas_preset,
-        options.get("max_size", 128),
-        options.get("resolution", (128, 128)),
+        options.get("max_size", 32),
+        options.get("resolution", (32, 32)),
         options.get("orientation", "auto"),
         options.get("fit", "contain"),
         _normalize_hex_color(options.get("background_color", "FFFFFF")),
-        options.get("material_color_count", 48),
+        options.get("material_color_count", 24),
         options.get("palette_mode", "adaptive"),
     )
 
@@ -592,12 +590,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Generate an independent Physical Layer print workbook.")
     parser.add_argument("image", type=Path)
     parser.add_argument("-o", "--output", type=Path)
-    parser.add_argument("--max-size", type=int, default=128)
+    parser.add_argument("--max-size", type=int, default=32)
     parser.add_argument("--cell-size", type=float, default=3.0)
-    parser.add_argument("--material-colors", type=int, default=48)
+    parser.add_argument("--material-colors", type=int, default=24)
     parser.add_argument("--palette", choices=["adaptive", "lego", "liquitex_basics_24"], default="adaptive")
     parser.add_argument("--canvas-size", choices=sorted(CANVAS_PRESETS), default="a4")
-    parser.add_argument("--resolution", type=parse_resolution, default=(128, 128))
+    parser.add_argument("--resolution", type=parse_resolution, default=(32, 32))
     parser.add_argument("--orientation", choices=sorted(ORIENTATIONS), default="auto")
     parser.add_argument("--fit", choices=sorted(FIT_MODES), default="contain")
     parser.add_argument("--background-color", default="FFFFFF")

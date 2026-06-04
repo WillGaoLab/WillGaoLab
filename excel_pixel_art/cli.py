@@ -42,8 +42,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--max-size",
         type=int,
-        default=96,
-        help="Maximum width or height in Excel cells. Default: 96",
+        default=32,
+        help="Maximum width or height in Excel cells. Default: 32",
     )
     parser.add_argument(
         "--cell-size",
@@ -54,8 +54,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--colors",
         type=int,
-        default=48,
-        help="Maximum number of indexed colors to use in the template. Default: 48",
+        default=24,
+        help="Maximum number of indexed colors to use in the template. Default: 24",
     )
     parser.add_argument(
         "--canvas-size",

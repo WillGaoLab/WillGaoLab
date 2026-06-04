@@ -14,6 +14,7 @@ if __package__ in {None, ""}:
 from excel_pixel_art.canvas import CANVAS_PRESETS, FIT_MODES, ORIENTATIONS
 from excel_pixel_art.converter import image_to_excel
 from excel_pixel_art.physical import image_to_physical_excel, image_to_physical_masks, image_to_physical_pdf
+from excel_pixel_art.poster_print import validate_poster_split
 
 
 def main() -> None:
@@ -86,7 +87,7 @@ def _digital_layer(uploaded_file) -> None:
                 "Width cells",
                 min_value=1,
                 max_value=2000,
-                value=128,
+                value=32,
                 step=8,
                 key="digital_width",
             )
@@ -94,18 +95,18 @@ def _digital_layer(uploaded_file) -> None:
                 "Height cells",
                 min_value=1,
                 max_value=2000,
-                value=128,
+                value=32,
                 step=8,
                 key="digital_height",
             )
             resolution = (int(width_cells), int(height_cells))
-            max_size = 128
+            max_size = 32
         else:
             max_size = st.number_input(
                 "Max cells",
                 min_value=1,
                 max_value=512,
-                value=128,
+                value=32,
                 step=8,
                 key="digital_max_size",
             )
@@ -115,7 +116,7 @@ def _digital_layer(uploaded_file) -> None:
             "Indexed colors",
             min_value=2,
             max_value=256,
-            value=48,
+            value=24,
             key="digital_colors",
         )
         cell_size = st.number_input(
@@ -201,7 +202,7 @@ def _physical_layer(uploaded_file) -> None:
                 "Physical width cells",
                 min_value=1,
                 max_value=2000,
-                value=128,
+                value=32,
                 step=8,
                 key="physical_width",
             )
@@ -209,18 +210,18 @@ def _physical_layer(uploaded_file) -> None:
                 "Physical height cells",
                 min_value=1,
                 max_value=2000,
-                value=128,
+                value=32,
                 step=8,
                 key="physical_height",
             )
             resolution = (int(width_cells), int(height_cells))
-            max_size = 128
+            max_size = 32
         else:
             max_size = st.number_input(
                 "Physical max cells",
                 min_value=1,
                 max_value=512,
-                value=128,
+                value=32,
                 step=8,
                 key="physical_max_size",
             )
@@ -230,7 +231,7 @@ def _physical_layer(uploaded_file) -> None:
             "Material Palette colors",
             min_value=2,
             max_value=256,
-            value=48,
+            value=24,
             key="physical_colors",
         )
         cell_size = st.number_input(
@@ -273,6 +274,37 @@ def _physical_layer(uploaded_file) -> None:
         if not split_poster:
             poster_pages_wide = 1
             poster_pages_tall = 1
+        poster_split_valid = True
+        if resolution is None:
+            poster_split_valid = not split_poster
+            if split_poster:
+                st.warning(
+                    "Poster Split Summary\n\n"
+                    "Status: Pending\n\n"
+                    "Enable exact physical resolution to verify equal tile dimensions."
+                )
+        else:
+            poster_summary = validate_poster_split(
+                resolution,
+                (int(poster_pages_wide), int(poster_pages_tall)),
+            )
+            poster_split_valid = poster_summary.valid
+            cells_per_page = (
+                f"{poster_summary.cells_per_page[0]} x {poster_summary.cells_per_page[1]} cells"
+                if poster_summary.cells_per_page is not None
+                else "Not available"
+            )
+            summary_text = (
+                "**Poster Split Summary**\n\n"
+                f"Master: `{resolution[0]} x {resolution[1]} cells`\n\n"
+                f"Split: `{int(poster_pages_wide)} x {int(poster_pages_tall)} pages`\n\n"
+                f"Each page: `{cells_per_page}`\n\n"
+                f"Status: **{'Valid' if poster_summary.valid else 'Invalid'}**"
+            )
+            if poster_summary.valid:
+                st.success(summary_text)
+            else:
+                st.error(f"{summary_text}\n\nReason: {poster_summary.reason}")
 
     with masks_column:
         st.subheader("Color Masks")
@@ -296,7 +328,11 @@ def _physical_layer(uploaded_file) -> None:
     if st.button(
         "Generate Physical outputs",
         type="primary",
-        disabled=uploaded_file is None or not (output_workbook or output_pdf or (output_masks and generate_color_masks)),
+        disabled=(
+            uploaded_file is None
+            or not poster_split_valid
+            or not (output_workbook or output_pdf or (output_masks and generate_color_masks))
+        ),
         key="generate_physical",
     ):
         with st.spinner("Generating Physical outputs..."):

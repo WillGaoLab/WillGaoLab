@@ -15,9 +15,9 @@ from .canvas import CANVAS_PRESETS, FIT_MODES, ORIENTATIONS, CanvasPreset
 def image_to_excel(
     image_path: str | Path,
     output_path: str | Path,
-    max_size: int = 96,
+    max_size: int = 32,
     cell_size: float = 3.0,
-    color_count: int = 48,
+    color_count: int = 24,
     canvas_size: str | None = None,
     resolution: tuple[int, int] | None = None,
     orientation: str = "auto",

@@ -68,9 +68,9 @@ class PixelArtRequestHandler(BaseHTTPRequestHandler):
             return
 
         try:
-            max_size = _parse_int_field(form, "max_size", default=96)
+            max_size = _parse_int_field(form, "max_size", default=32)
             cell_size = _parse_float_field(form, "cell_size", default=3.0)
-            color_count = _parse_int_field(form, "color_count", default=48, minimum=2, maximum=256)
+            color_count = _parse_int_field(form, "color_count", default=24, minimum=2, maximum=256)
             canvas_size = _parse_choice_field(form, "canvas_size", choices={"", *CANVAS_PRESETS}, default="")
             resolution = _parse_optional_resolution(form)
             orientation = _parse_choice_field(form, "orientation", choices=ORIENTATIONS, default="auto")
@@ -450,15 +450,15 @@ def _render_page(error: str | None = None) -> str:
         </label>
         <label>
           Max cells
-          <input type="number" name="max_size" min="1" max="512" value="128" required>
+          <input type="number" name="max_size" min="1" max="512" value="32" required>
         </label>
         <label>
           Width cells
-          <input type="number" name="resolution_width" min="1" max="2000" placeholder="Auto">
+          <input type="number" name="resolution_width" min="1" max="2000" value="32" required>
         </label>
         <label>
           Height cells
-          <input type="number" name="resolution_height" min="1" max="2000" placeholder="Auto">
+          <input type="number" name="resolution_height" min="1" max="2000" value="32" required>
         </label>
         <label>
           Cell size
@@ -466,7 +466,7 @@ def _render_page(error: str | None = None) -> str:
         </label>
         <label>
           Colors
-          <input type="number" name="color_count" min="2" max="256" value="48" required>
+          <input type="number" name="color_count" min="2" max="256" value="24" required>
         </label>
         <label>
           Background

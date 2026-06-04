@@ -15,7 +15,17 @@ Upload an image and independently generate:
 - Digital Excel paint-by-number workbooks.
 - Physical production ZIPs containing selected workbook, printable PDF, and color-mask outputs.
 
-Version 2 includes Adaptive, LEGO, and Liquitex Basics 24 material palette modes.
+Version 3 keeps the independent Digital and Physical workflows and adds production-ready Poster Split output.
+
+V3 includes:
+
+- Project-wide `32 x 32` and 24-color interactive defaults.
+- Poster Split divisibility validation with cells-per-page summaries.
+- True A4 printable poster pages.
+- Global coordinates and one global color index across poster tiles.
+- Three printable PDF sets: colored numbered-grid tiles, clean references, and blank numbered templates.
+- Sharp ReportLab vector PDFs with vector cells, grids, and real PDF text.
+- Adaptive, LEGO, and Liquitex Basics 24 material palette modes.
 
 ## Streamlit Community Cloud
 
@@ -31,7 +41,7 @@ Digital workbooks include:
 - `Template` - paper-style paint-by-number sheet with light gray numbers.
 - `Color Index` - indexed colors with swatches and cell counts.
 
-Physical outputs support an independent print canvas, material palette, poster splitting, color masks, workbook output, printable PDF output, and mask output.
+Physical outputs support an independent print canvas, material palette, validated poster splitting, color masks, workbook output, true-A4 vector printable PDF output, and mask output.
 
 ## Local Run
 
