@@ -31,7 +31,7 @@ V3 includes:
 
 Use this repository in Streamlit Community Cloud with:
 
-- Repository: `WillGaoLab/WillGaoLab`
+- Repository: `WillGaoLab/excel_pixel_art_generator`
 - Branch: `main`
 - Main file path: `streamlit_app.py`
 
