@@ -23,7 +23,7 @@ Streamlit application for generating digital Excel pixel-art workbooks and
 physical production outputs from uploaded images.
 
 - Repository: <https://github.com/WillGaoLab/excel_pixel_art_generator>
-- Live app: <https://willgaolab-dvy5xga3u2xexllw7lei82.streamlit.app/>
+- Live app: <https://excelpixelartgenerator-8tq4k2vmpkxskubnxzrxeo.streamlit.app/>
 - Project page: <https://williampeidonggao.com/resources/excel-pixel-art-generator/>
 
 ## Future Projects
