@@ -86,6 +86,15 @@ articles, paywalled content, or copyrighted figures. Users are responsible for
 reviewing and complying with applicable publisher terms, institutional
 agreements, crawling policies, and law.
 
+This is a WillGaoLab project created and maintained by William (Peidong) Gao.
+It may be referenced, showcased, or documented through the independent
+WillGaoLab research brand and WilliamGaoWeb. It is not affiliated with,
+endorsed by, sponsored by, or officially associated with any publisher,
+organization, or service referenced in its documentation. All referenced
+trademarks, journal titles, logos, and publisher names remain the property of
+their respective owners and are used solely for identification and descriptive
+purposes.
+
 ## Personal Use and Legal Notice
 
 Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao. The WillGaoLab name, project identity, documentation, source code organization, and product presentation are maintained by William (Peidong) Gao unless otherwise stated.
