@@ -75,6 +75,8 @@ http://127.0.0.1:8501
 
 Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao. The WillGaoLab name, project identity, documentation, source code organization, and product presentation are maintained by William (Peidong) Gao unless otherwise stated.
 
+The hosted app uses Microsoft Clarity to process usage and technical analytics data. Microsoft Clarity and Streamlit Community Cloud may process data under their own terms and privacy policies.
+
 This app is provided for personal, educational, research, and non-commercial creative use only.
 
 Do not use uploaded images, generated templates, generated workbooks, or derivative outputs for commercial sale, paid products, merchandise, advertising, client work, or other revenue-generating activity unless you have independently secured all required rights and permissions.

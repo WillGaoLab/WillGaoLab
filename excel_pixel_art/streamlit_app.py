@@ -11,6 +11,7 @@ import streamlit as st
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from excel_pixel_art.analytics import render_clarity_analytics
 from excel_pixel_art.canvas import CANVAS_PRESETS, FIT_MODES, ORIENTATIONS
 from excel_pixel_art.converter import image_to_excel
 from excel_pixel_art.physical import image_to_physical_excel, image_to_physical_masks, image_to_physical_pdf
@@ -23,6 +24,7 @@ def main() -> None:
         page_icon="",
         layout="wide",
     )
+    render_clarity_analytics()
 
     st.title("Excel Pixel Art Generator")
     st.caption("Upload one image, then generate completely separate Digital and Physical outputs.")
@@ -373,7 +375,8 @@ def _use_privacy_and_liability() -> None:
 
 Uploaded images are processed solely to generate requested outputs. The application does not
 intentionally retain uploaded images after processing. Temporary processing files are deleted when no
-longer needed. Third-party hosting providers may process data under their own terms and policies.
+longer needed. Third-party hosting and analytics providers, including Streamlit Community Cloud and
+Microsoft Clarity, may process usage and technical data under their own terms and privacy policies.
 
 Users are solely responsible for ensuring they have all necessary rights, permissions, and legal
 authority to upload, transform, print, share, or otherwise use any content submitted to the application.
