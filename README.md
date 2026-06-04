@@ -71,6 +71,21 @@ http://127.0.0.1:8501
 - Project repository: https://github.com/PeidongGao/excel-pixel-art-generator
 - Personal website page: https://williampeidonggao.com/resources/excel-pixel-art-generator/
 
+## Knowledge Base: Journal Harvester SOP
+
+Journal Harvester SOP provides browser-based workflows for low-volume,
+user-initiated export of publicly visible bibliographic metadata from Cell,
+Nature, and Science.
+
+- Canonical repository: https://github.com/PeidongGao/journal-harvester-sop
+- Website project page: https://williampeidonggao.com/resources/journal-harvester-sop/
+- Usage disclaimer: https://github.com/PeidongGao/journal-harvester-sop/blob/main/DISCLAIMER.md
+
+The project does not publish scraped CSV datasets, publisher PDFs, full-text
+articles, paywalled content, or copyrighted figures. Users are responsible for
+reviewing and complying with applicable publisher terms, institutional
+agreements, crawling policies, and law.
+
 ## Personal Use and Legal Notice
 
 Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao. The WillGaoLab name, project identity, documentation, source code organization, and product presentation are maintained by William (Peidong) Gao unless otherwise stated.
