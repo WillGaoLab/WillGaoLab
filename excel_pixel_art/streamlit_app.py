@@ -369,29 +369,47 @@ def _use_privacy_and_liability() -> None:
     with st.expander("Important information", expanded=False):
         st.markdown(
             """
-**Uploaded images and user responsibility**
+**Uploaded Images**
 
-- The app processes uploaded images only to generate the outputs requested by the user. It does not
-  intentionally retain uploaded images, and temporary processing files created by the app are deleted
-  after generation. Hosting-platform infrastructure may independently process data under its own terms.
-- Users are solely responsible for the images they upload and must have all rights, permissions, and
-  legal authority required to upload, transform, print, download, share, or otherwise use them.
-- WillGaoLab and William (Peidong) Gao do not claim ownership of user-uploaded images and accept no
-  responsibility or liability for uploaded content, image-rights violations, misuse, or resulting claims.
+Uploaded images are processed solely to generate requested outputs. The application does not
+intentionally retain uploaded images after processing. Temporary processing files are deleted when no
+longer needed. Third-party hosting providers may process data under their own terms and policies.
 
-**Print Mode and Material Palette**
+Users are solely responsible for ensuring they have all necessary rights, permissions, and legal
+authority to upload, transform, print, share, or otherwise use any content submitted to the application.
 
-- Brand and product names are provided only as unaffiliated references. WillGaoLab and William
-  (Peidong) Gao are not sponsored, endorsed, authorized by, or associated with any listed brand,
-  manufacturer, retailer, or product.
-- Palette matches, quantities, print layouts, masks, and material recommendations are estimates and may
-  be inaccurate, incomplete, unavailable, or unsuitable. Users must independently verify colors,
-  dimensions, quantities, compatibility, safety, availability, and costs before purchasing or producing
-  anything.
-- All purchasing, printing, material selection, assembly, and production decisions are made at the
-  user's own risk and judgment. To the maximum extent permitted by law, WillGaoLab and William
-  (Peidong) Gao accept no responsibility or liability for purchases, expenses, losses, waste, incorrect
-  results, print errors, failed projects, injuries, damages, or other consequences.
+WillGaoLab and William (Peidong) Gao do not claim ownership of user-uploaded content and assume no
+responsibility for uploaded materials, intellectual property violations, privacy violations, or resulting
+claims.
+
+**Generated Outputs**
+
+All outputs, including image transformations, color mappings, material palettes, quantity estimates,
+print layouts, masks, poster splits, and production recommendations, are generated automatically and may
+contain errors or inaccuracies.
+
+Actual results may vary significantly due to differences in screens, printers, materials, lighting
+conditions, manufacturing tolerances, product availability, and production methods.
+
+Users must independently verify all colors, dimensions, quantities, materials, compatibility, safety
+requirements, and production settings before use.
+
+**Third-Party Brands**
+
+Any brand, product, retailer, or manufacturer names are provided solely for reference purposes.
+WillGaoLab and William (Peidong) Gao are not affiliated with, sponsored by, endorsed by, or associated
+with any referenced third party unless explicitly stated.
+
+**Limitation of Liability**
+
+All purchasing, printing, material selection, assembly, fabrication, and production decisions are made
+entirely at the user's own risk.
+
+To the maximum extent permitted by law, WillGaoLab and William (Peidong) Gao shall not be liable for any
+losses, expenses, damages, failed projects, print errors, material waste, injuries, or other consequences
+arising from the use of this application or its outputs.
+
+This application and all outputs are provided **"AS IS"** without warranties of any kind.
 
 This information is not legal advice.
             """
