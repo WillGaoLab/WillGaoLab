@@ -89,11 +89,11 @@ agreements, crawling policies, and law.
 This is a WillGaoLab project created and maintained by William (Peidong) Gao.
 It may be referenced, showcased, or documented through the independent
 WillGaoLab research brand and WilliamGaoWeb. It is not affiliated with,
-endorsed by, sponsored by, or officially associated with any publisher,
-organization, or service referenced in its documentation. All referenced
-trademarks, journal titles, logos, and publisher names remain the property of
-their respective owners and are used solely for identification and descriptive
-purposes.
+endorsed by, sponsored by, or officially associated with Cell Press, Elsevier,
+Springer Nature, AAAS, Crossref, or any publisher, organization, or service
+referenced in this repository. All referenced trademarks, journal titles,
+logos, and publisher names remain the property of their respective owners and
+are used solely for identification and descriptive purposes.
 
 ## Personal Use and Legal Notice
 
