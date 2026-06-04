@@ -1,6 +1,6 @@
 # WillGaoLab Excel Pixel Art Generator
 
-Streamlit app for generating Excel paint-by-number workbooks from uploaded images.
+Streamlit app for generating independent Digital and Physical pixel-art production outputs from uploaded images.
 
 Excel Pixel Art Generator is a WillGaoLab product made by William (Peidong) Gao.
 
@@ -10,7 +10,12 @@ Open the live app:
 
 https://willgaolab-dvy5xga3u2xexllw7lei82.streamlit.app/
 
-Upload an image, choose paper size, set exact Excel-cell resolution, choose indexed color count, and download an `.xlsx` workbook.
+Upload an image and independently generate:
+
+- Digital Excel paint-by-number workbooks.
+- Physical production ZIPs containing selected workbook, printable PDF, and color-mask outputs.
+
+Version 2 includes Adaptive, LEGO, and Liquitex Basics 24 material palette modes.
 
 ## Streamlit Community Cloud
 
@@ -20,11 +25,13 @@ Use this repository in Streamlit Community Cloud with:
 - Branch: `main`
 - Main file path: `streamlit_app.py`
 
-Each workbook includes:
+Digital workbooks include:
 
 - `Reference` - finished colored pixel art.
 - `Template` - paper-style paint-by-number sheet with light gray numbers.
 - `Color Index` - indexed colors with swatches and cell counts.
+
+Physical outputs support an independent print canvas, material palette, poster splitting, color masks, workbook output, printable PDF output, and mask output.
 
 ## Local Run
 
