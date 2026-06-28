@@ -7,6 +7,14 @@ WillGaoLab is an independent research and learning brand created and maintained
 by William (Peidong) Gao.
 
 ## Open-Source Projects
+### MarketTrackingSystem
+
+Weekly market tracking report generator for `VOO`, `QQQ`, and `SMH`.
+Reported values come from Yahoo Finance and are independently cross-validated
+before the report is written.
+
+- WillGaoLab repository: <https://github.com/WillGaoLab/MarketTrackingSystem>
+- Primary development repository: <https://github.com/PeidongGao/MarketTrackingSystem>
 
 ### auto_paper_get_CNS
 
