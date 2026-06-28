@@ -15,6 +15,7 @@ before the report is written.
 
 - WillGaoLab repository: <https://github.com/WillGaoLab/MarketTrackingSystem>
 - Primary development repository: <https://github.com/PeidongGao/MarketTrackingSystem>
+- Project page: <https://williampeidonggao.com/resources/market-tracker/>
 
 ### auto_paper_get_CNS
 
