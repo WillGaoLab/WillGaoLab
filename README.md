@@ -7,6 +7,14 @@ WillGaoLab is an independent research and learning brand created and maintained
 by William (Peidong) Gao.
 
 ## Open-Source Projects
+### MorningBrief
+
+Local CLI for running a configured Codex-based Morning Brief workflow and
+browsing generated reports through a read-only Streamlit interface.
+
+- Primary development repository: <https://github.com/PeidongGao/MorningBrief>
+- WillGaoLab organization mirror/fork: pending
+
 ### MarketTrackingSystem
 
 Weekly market tracking report generator for `VOO`, `QQQ`, and `SMH`.
