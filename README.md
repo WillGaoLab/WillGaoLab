@@ -11,9 +11,9 @@ by William (Peidong) Gao.
 
 Local CLI for running a configured Codex-based Morning Brief workflow and
 browsing generated reports through a read-only Streamlit interface.
-
+- WillGaoLab repository: https://github.com/WillGaoLab/MorningBrief
 - Primary development repository: <https://github.com/PeidongGao/MorningBrief>
-- WillGaoLab organization mirror/fork: pending
+- Project page: <https://williampeidonggao.com/resources/MorningBrief/>
 
 ### MarketTrackingSystem
 
