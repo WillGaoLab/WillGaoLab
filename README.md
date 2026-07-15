@@ -25,6 +25,15 @@ before the report is written.
 - Primary development repository: <https://github.com/PeidongGao/MarketTrackingSystem>
 - Project page: <https://williampeidonggao.com/resources/market-tracker/>
 
+### Daily Market Tracker
+
+Automated daily market observation system that records opening gaps across six
+core indicators, generates a Market Fingerprint visualization, and maintains a
+historical dataset for long-term research.
+
+- WillGaoLab repository: <https://github.com/WillGaoLab/Daily_Market_Tracker>
+- Primary development repository: <https://github.com/PeidongGao/Daily_Market_Tracker>
+
 ### auto_paper_get_CNS
 
 Browser-based SOPs for low-volume, user-initiated discovery and export of
