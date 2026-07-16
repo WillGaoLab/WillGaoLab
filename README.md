@@ -33,7 +33,7 @@ historical dataset for long-term research.
 
 - WillGaoLab repository: <https://github.com/WillGaoLab/Daily_Market_Tracker>
 - Primary development repository: <https://github.com/PeidongGao/Daily_Market_Tracker>
-- Live app: <https://dailymarkettracker-mtklpsoauidwibgbij9xoq.streamlit.app/>
+- Live app: <https://dailymarkettracker-jrnxjbmkxitvegoascnxk4.streamlit.app/>
 
 ### auto_paper_get_CNS
 
